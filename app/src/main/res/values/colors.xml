@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#FF4081</color>
+    <color name="CS371Brown">#692300</color>
+    <color name="CS371Blue">#003366</color>
+    <color name="CS371Green">#23845f</color>
+    <color name="CS371NewGreen">#23845f</color>
+    <color name="CS371NewBillow">#626670</color>
+    <color name="CS371Smog">#8a7d80</color>
+    <color name="CS371NewSheer">#91b3bc</color>
+    <color name="CS371Dew">#91b3bc</color>
+    <color name="CS371Slate">#5b7d87</color>
+    <color name="CS371Creosote">#2e323c</color>
+    <color name="CS371Rain">#9fd5b3</color>
+    <color name="CS371GreenScheme1">#49796b</color>
+    <color name="CS371GreenScheme2">#317873</color>
+    <color name="CS371GreenScheme3">#a0d6b4</color>
+    <color name="CS371GreenScheme4">#515f9ea0</color>
+    <color name="CS371GreenScheme5">#a3c1ad</color>
+</resources>
