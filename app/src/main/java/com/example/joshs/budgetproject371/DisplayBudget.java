@@ -4,6 +4,7 @@ import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.graphics.Color;
+import android.os.AsyncTask;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.Gravity;
@@ -35,6 +36,10 @@ public class DisplayBudget extends AppCompatActivity implements View.OnClickList
         try {
             btnDisplayDifference = (Button) findViewById(R.id.btnGoBackToDisplayingBudget);
             btnMainMenu = (Button) findViewById(R.id.btnMainMenu);
+
+            MyTask myTask = new MyTask();
+            myTask.execute();
+
             lvBudgetItems = (ListView) findViewById(R.id.lvBudgetItems);
 
             SharedPreferences sp = getSharedPreferences(InputBudget.APP_PREFS, Context.MODE_PRIVATE);
@@ -42,7 +47,7 @@ public class DisplayBudget extends AppCompatActivity implements View.OnClickList
             String temp = sp.getString(InputBudget.ITEM_ARRAY_LIST, "");
             arrayList = gson.fromJson(temp, new ArrayList<String>().getClass());
             adapter = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, arrayList);
-            if(arrayList.size() != 0) {
+            if(!arrayList.isEmpty()) {
                 lvBudgetItems.setAdapter(adapter);
                 adapter.notifyDataSetChanged();
             }
@@ -56,9 +61,11 @@ public class DisplayBudget extends AppCompatActivity implements View.OnClickList
 
     @Override
     public void onClick(View v) {
+        MyTask myTask = new MyTask();
         switch (v.getId()) {
             case R.id.btnGoBackToDisplayingBudget:
                 showWithAnim(v);
+                myTask.execute();
                 displayDifference(v);
                 break;
             case R.id.btnMainMenu:
@@ -68,6 +75,7 @@ public class DisplayBudget extends AppCompatActivity implements View.OnClickList
                         .backgroundColor(Color.parseColor("#333639"))
                         .build()
                         .show();
+                myTask.execute();
                 goBack(v);
                 break;
         }
@@ -108,5 +116,39 @@ public class DisplayBudget extends AppCompatActivity implements View.OnClickList
 
             }
         });
+    }
+
+    class MyTask extends AsyncTask<Void, Void, Void> {
+
+        @Override
+        protected Void doInBackground(Void... voids) {
+
+            try{
+                Thread.sleep(800);
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
+            return null;
+        }
+
+        @Override
+        protected void onPreExecute() {
+            disableButtons();
+        }
+
+        @Override
+        protected void onPostExecute(Void aVoid) {
+            enableButtons();
+        }
+    }
+
+    public void disableButtons() {
+        btnDisplayDifference.setEnabled(false);
+        btnMainMenu.setEnabled(false);
+    }
+
+    public void enableButtons() {
+        btnDisplayDifference.setEnabled(true);
+        btnMainMenu.setEnabled(true);
     }
 }

@@ -9,7 +9,6 @@
     <color name="CS371NewGreen">#23845f</color>
     <color name="CS371NewBillow">#626670</color>
     <color name="CS371Smog">#8a7d80</color>
-    <color name="CS371NewSheer">#91b3bc</color>
     <color name="CS371Dew">#91b3bc</color>
     <color name="CS371Slate">#5b7d87</color>
     <color name="CS371Creosote">#2e323c</color>
@@ -19,4 +18,23 @@
     <color name="CS371GreenScheme3">#a0d6b4</color>
     <color name="CS371GreenScheme4">#515f9ea0</color>
     <color name="CS371GreenScheme5">#a3c1ad</color>
+    <!--<color name="CS371Tetrad1">#7a9e35</color>-->
+    <!--<color name="CS371Tetrad2">#aa4139</color>-->
+    <!--<color name="CS371Tetrad3">#572a72</color>-->
+    <!--<color name="CS371Tetrad4">#d2ed9e</color>-->
+    <!--<color name="CS371Tetrad5">#9775aa</color>-->
+    <!--<color name="CS371Tetrad6">#344f00</color>-->
+    <color name="CS371Tetrad10">#E4828B</color>
+    <color name="CS371Tetrad20">#FFE8BA</color>
+    <color name="CS371Tetrad30">#714E0A</color>
+    <color name="CS371Tetrad40">#84B5B1</color>
+    <color name="CS371Tetrad50">#982833</color>
+    <color name="CS371Tetrada">#175e08</color>
+    <color name="CS371Tetradb">#348423</color>
+    <color name="CS371Tetradc">#80c571</color>
+    <color name="CS371Tetradd">#ADDFA3</color>
+    <color name="CS371Tetrade">#24396A</color>
+    <color name="CS371Tetradf">#919FBF</color>
+    <color name="CS371Tetradg">#19615C</color>
+
 </resources>
